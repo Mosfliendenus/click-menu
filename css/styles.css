@@ -86,25 +86,6 @@ header p {
     display: none;
 }
 
-/* Menú digital (mantenido por si se usa en el futuro) */
-.menu-display {
-    margin-top: 20px;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-}
-
-.menu-display h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-#menu-content {
-    color: #34495e;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
 /* Modal */
 .modal {
     position: fixed;
