@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Librería para escanear QR (html5-qrcode) -->
     <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
-    <!-- Fuente Poppins desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -19,14 +17,9 @@
         <main>
             <button id="scan-button" class="btn">Escanear QR</button>
             <div id="qr-reader" class="qr-reader hidden"></div>
-            <!-- Modal para confirmación de redirección -->
-            <div id="redirect-modal" class="modal hidden">
-                <div class="modal-content">
-                    <h3>¡Listo para el menú!</h3>
-                    <p>Estás a punto de ser redirigido al menú digital. Da clic si estás de acuerdo.</p>
-                    <button id="confirm-redirect" class="btn btn-confirm">Aceptar</button>
-                    <button id="cancel-redirect" class="btn btn-cancel">Cancelar</button>
-                </div>
+            <div id="menu-display" class="menu-display hidden">
+                <h2>Menú Digital</h2>
+                <div id="menu-content"></div>
             </div>
         </main>
     </div>
