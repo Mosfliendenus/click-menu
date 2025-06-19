@@ -47,12 +47,29 @@ header p {
     border-radius: 50px;
     cursor: pointer;
     transition: transform 0.3s, background 0.3s;
-    margin: 20px 0;
+    margin: 10px;
 }
 
 .btn:hover {
     background: #2980b9;
     transform: scale(1.05);
+}
+
+/* Botones del modal */
+.btn-confirm {
+    background: #2ecc71;
+}
+
+.btn-confirm:hover {
+    background: #27ae60;
+}
+
+.btn-cancel {
+    background: #e74c3c;
+}
+
+.btn-cancel:hover {
+    background: #c0392b;
 }
 
 /* Escáner QR */
@@ -69,7 +86,7 @@ header p {
     display: none;
 }
 
-/* Menú digital */
+/* Menú digital (mantenido por si se usa en el futuro) */
 .menu-display {
     margin-top: 20px;
     padding: 20px;
@@ -88,6 +105,54 @@ header p {
     line-height: 1.6;
 }
 
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal:not(.hidden) {
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal:not(.hidden) .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
 /* Responsivo */
 @media (max-width: 600px) {
     .container {
@@ -100,6 +165,19 @@ header p {
 
     .btn {
         padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content p {
         font-size: 1rem;
     }
 }
